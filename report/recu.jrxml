@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8e3a6d9c-3f53-4a01-a3d6-197e4413e618">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="993d042b-e924-4751-b3d5-aba0023bb6d7"/>
+	<parameter name="idcmd" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select clt.nom,cmd.id_commande,clt.contact,cmd.nbreArticle,cmd.prixTotal,cmd.avance,cmd.reste,cmd.depot from client clt, commande cmd where cmd.id_commande=$P{idcmd} and clt.id_client=cmd.id_client]]>
+	</queryString>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_commande" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nbreArticle" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prixTotal" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="avance" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reste" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="depot" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="268" height="54" forecolor="#00CCCC" uuid="ce05f9f2-65d6-4084-a93e-53cf8e75a2d7"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Reçu de paiement]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="7" width="250" height="28" uuid="0aa16d25-4d07-4825-a3d1-7a7e2ef4c617"/>
+				<textElement>
+					<font fontName="Tempus Sans ITC" size="18"/>
+				</textElement>
+				<text><![CDATA[SUMAR CREATION COUTURE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" forecolor="#00CCCC" uuid="74b36099-6dfa-4c1b-adc0-0db954bb14a1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="174" splitType="Stretch">
+			<staticText>
+				<reportElement x="93" y="0" width="91" height="20" uuid="6d37d228-9e12-44b9-964f-1a1686a5ae0c"/>
+				<text><![CDATA[Nom Client :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="33" width="91" height="20" uuid="a38a9159-2298-48ae-a730-46e7e257ef72"/>
+				<text><![CDATA[Contact Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="63" width="100" height="20" uuid="52ce9ab4-c015-48e0-8c13-06d3fdee5352"/>
+				<text><![CDATA[Numero Commande]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="94" width="100" height="20" uuid="f687ff4c-36e7-4601-8b22-3a2bfdb9736b"/>
+				<text><![CDATA[Nombre d'article]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="126" width="100" height="20" uuid="616290e8-f3f6-409b-9278-f5225d3d37c0"/>
+				<text><![CDATA[Montant total payer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="154" width="100" height="20" uuid="299a9f40-6240-4427-a86f-9e7c92539174"/>
+				<text><![CDATA[Reste]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="268" y="0" width="100" height="20" uuid="ab11964f-7f33-487d-88da-583576f890bd"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="33" width="100" height="20" uuid="ae218d13-b165-4fb8-bca2-8053c8c164ca"/>
+				<textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="63" width="100" height="20" uuid="72ce6264-09cd-4a34-afa6-13c9f9c29417"/>
+				<textFieldExpression><![CDATA[$F{id_commande}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="94" width="100" height="20" uuid="05e8a4e4-24fd-4321-b02c-7fd405e04125"/>
+				<textFieldExpression><![CDATA[$F{nbreArticle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="126" width="100" height="20" uuid="926bef90-5c91-4d67-bd7a-7052c4dbcfc7"/>
+				<textFieldExpression><![CDATA[$F{prixTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="268" y="154" width="100" height="20" uuid="cd18c53e-a363-4454-b1c4-97d93b524608"/>
+				<text><![CDATA[000]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

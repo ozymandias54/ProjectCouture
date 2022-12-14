@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
+  </Properties>
+  <Events>
+    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMousePressed"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lbIcon" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lbMenuNom" pref="203" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="lbMenuNom" alignment="0" pref="50" max="32767" attributes="0"/>
+          <Component id="lbIcon" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="classe_special.LabelImage" name="lbIcon">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbMenuNom">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Liberation Sans" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nom menu"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Curseur en forme de main"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </SubComponents>
+</Form>

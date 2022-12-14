@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df674428-cd5e-4842-af05-c3fd4b3176b6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D9C3C3">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="328d3ed0-ced0-4438-843c-65fc94576c69"/>
+	<subDataset name="Table Dataset 2" uuid="8f967a7c-b1f6-4995-923c-9a90bf2c6e88"/>
+	<queryString>
+		<![CDATA[select ut.idu,ut.login,ut.profil,pl.nom,pl.prenom from utilisateur ut, personnel pl where ut.idp=pl.idp]]>
+	</queryString>
+	<field name="idu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="login" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="profil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="121" y="24" width="334" height="43" uuid="c7ed22c2-26e3-4e8e-99b3-58de7710d0e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Utilisateurs]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20" uuid="ba7f78d9-0931-4b77-8951-884d009a402e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[idu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="41" width="100" height="20" uuid="807421f0-b3c7-412d-b8c3-530851f57541"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="41" width="100" height="20" uuid="b0ed1d20-3d8a-457d-8eae-9136128019c8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[profil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="41" width="113" height="20" uuid="db8306c5-d08f-4158-b47c-b772b2ee5f0e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employé]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="41" width="555" height="1" uuid="2e333dc4-e9d5-4c9a-a117-27b5073312cd"/>
+			</line>
+			<line>
+				<reportElement x="0" y="60" width="555" height="1" uuid="16631695-fda1-49ca-a93d-67ce611693fe"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d3f6b362-a57b-46aa-88db-7b7f1d2d4503"/>
+				<textFieldExpression><![CDATA[$F{idu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="100" height="20" uuid="031ba062-5838-46d0-a189-4df9cbbf6b12"/>
+				<textFieldExpression><![CDATA[$F{login}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="20" uuid="0054b65a-b569-46ad-ac23-57b4b6ae5d8e"/>
+				<textFieldExpression><![CDATA[$F{profil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="55" height="20" uuid="2f0ca498-0ac5-48ba-b185-62b012abb01e"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="81" height="20" uuid="193a3846-0d71-47e4-a9a3-6b785af59594"/>
+				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="459df37c-bba6-4cf2-b937-fdcbd49a7dd4"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

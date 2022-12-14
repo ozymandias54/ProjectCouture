@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="556e9885-483a-4ada-b259-1355c8a6563b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idcmd" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select clt.nom,cmd.id_commande,clt.contact,cmd.nbreArticle,cmd.prixTotal,cmd.avance,cmd.reste,cmd.depot from client clt, commande cmd where cmd.id_commande=$P{idcmd} and clt.id_client=cmd.id_client]]>
+	</queryString>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_commande" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nbreArticle" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prixTotal" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="avance" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reste" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="depot" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" backcolor="#6666FF" uuid="946ffa10-fc54-4f0c-ae9c-b41655fdf7d0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="11" width="198" height="44" forecolor="#FFFFFF" uuid="3f9aba0e-985a-466a-957a-c6eac463fb0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUMAR COUTURE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="22" width="112" height="33" forecolor="#FFFFFF" uuid="a2ec99f2-a721-41b4-8283-6f0355e86b50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facture]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<rectangle>
+				<reportElement x="363" y="0" width="192" height="72" backcolor="#CCCCCC" uuid="54669c00-6ad6-4e71-a79b-9b00a4299734"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="363" y="10" width="48" height="15" uuid="223d7264-3313-4b91-b8d1-4f2d4eb77084"/>
+				<text><![CDATA[Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="35" width="48" height="20" uuid="e242bb9c-6678-42a8-9fe6-33d6481095ea"/>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="10" width="100" height="20" uuid="3434168b-230e-4d96-978e-0b26008587a0"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="35" width="100" height="20" uuid="2cb8564a-e1a1-4d46-a11b-b89c04767502"/>
+				<textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="152" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="36" uuid="41f83c52-fe39-4a66-9b04-d0745e8875b2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="36" uuid="ff1a8f04-cefc-4b08-a76d-939168df2657"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero Commande]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="157" height="36" uuid="b06d9563-f0b9-42b3-a6f2-b5059555119d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nbre Article]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="137" height="36" uuid="0b3dc947-bda7-4407-ba71-e156651c369b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant total]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="36" width="555" height="28" uuid="1ee5c867-3daa-4725-bc08-fe9ea99c406c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="28" y="77" width="311" height="75" uuid="d3b737c8-574a-4a96-a4bf-e1cc6b8764b1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="87" width="125" height="20" uuid="4d64ae2e-1da2-4eeb-9a5c-08504861c52f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant Payer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="120" width="125" height="20" uuid="26933857-0802-4f7e-a50c-27dec6065aef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant Restant]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="14" y="44" width="100" height="20" uuid="39c983d7-65bf-43ee-8242-97a622faa334"/>
+				<textFieldExpression><![CDATA[$F{id_commande}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="44" width="100" height="20" uuid="33f8065e-5440-438a-afb5-c2836c9209a2"/>
+				<textFieldExpression><![CDATA[$F{nbreArticle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="44" width="100" height="20" uuid="3b4b6a5a-33a7-472f-b25d-104e078243de"/>
+				<textFieldExpression><![CDATA[$F{prixTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="87" width="100" height="20" uuid="eeff942f-ce94-42bd-a08a-b0d9d7669d18"/>
+				<textFieldExpression><![CDATA[$F{avance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="120" width="100" height="20" uuid="13eff44e-f231-490e-99ef-75666ea99252"/>
+				<textFieldExpression><![CDATA[$F{reste}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
